@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: gluoncv2
+Version: 0.0.7
+Summary: Image classification models for Gluon
+Home-page: https://github.com/osmr/imgclsmob
+Author: osmr
+Author-email: osemery@gmail.com
+License: MIT
+Keywords: machine-learning deep-learning neuralnetwork image-classification imagenet mxnet gluon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# Large-scale image classification networks
+
+Several large-scale image classification models on MXNet/Gluon, trained on the ImageNet-1k dataset.
+
+## Installation
+
+To install, use:
+```
+pip install gluoncv2 mxnet>=1.2.1
+```
+To enable different hardware supports such as GPUs, check out [mxnet variants](https://pypi.org/project/mxnet/).
+For example, you can install with cuda-9.2 supported mxnet:
+```
+pip install gluoncv2 mxnet-cu92>=1.2.1
+```
+
+## Usage
+
+Example of using the pretrained ResNet-18 model:
+```
+from gluoncv2.model_provider import get_model as glcv2_get_model
+net = glcv2_get_model("resnet18", pretrained=True)
+```
+
+
